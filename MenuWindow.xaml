@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MenuWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="TakeGameLabel" Content="Wybierz Grę" HorizontalAlignment="Left" Margin="337,50,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GAMENAME1Button" Content="Nazwa Gry 1" HorizontalAlignment="Left" Margin="63,130,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="GAMENAME3Button" Content="Nazwa Gry 3" HorizontalAlignment="Left" Margin="63,210,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="GAMENAME2Button" Content="Nazwa Gry 2" HorizontalAlignment="Left" Margin="596,135,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="GAMENAME4Button" Content="Nazwa Gry 4" HorizontalAlignment="Left" Margin="596,210,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="GAMENAME5Button" Content="Nazwa Gry 5" HorizontalAlignment="Left" Margin="63,297,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="GAMENAME6Button" Content="Nazwa Gry 6" HorizontalAlignment="Left" Margin="596,297,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
