@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="300">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,-10,-5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.43"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="111,263,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="GuessLoginButton" Content="Zaloguj jako gość" HorizontalAlignment="Left" Margin="101,297,0,0" VerticalAlignment="Top" Width="97" FontStyle="Italic">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFCD0B0B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" Margin="101,125,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="101,169,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LoginLabel" Content="Login" HorizontalAlignment="Left" Margin="40,125,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PasswordLabel" Content="Hasło" HorizontalAlignment="Left" Margin="40,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.044,-0.012"/>
+
     </Grid>
 </Window>
