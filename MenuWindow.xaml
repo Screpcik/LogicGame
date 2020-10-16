@@ -8,12 +8,13 @@
         Title="MenuWindow" Height="450" Width="800">
     <Grid>
         <Label x:Name="TakeGameLabel" Content="Wybierz Grę" HorizontalAlignment="Left" Margin="337,50,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="GAMENAME1Button" Content="Nazwa Gry 1" HorizontalAlignment="Left" Margin="63,130,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="GAMENAME3Button" Content="Nazwa Gry 3" HorizontalAlignment="Left" Margin="63,210,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="GAMENAME2Button" Content="Nazwa Gry 2" HorizontalAlignment="Left" Margin="596,135,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="GAMENAME4Button" Content="Nazwa Gry 4" HorizontalAlignment="Left" Margin="596,210,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="GAMENAME5Button" Content="Nazwa Gry 5" HorizontalAlignment="Left" Margin="63,297,0,0" VerticalAlignment="Top" Width="75" />
-        <Button x:Name="GAMENAME6Button" Content="Nazwa Gry 6" HorizontalAlignment="Left" Margin="596,297,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="DzialaniaMatematyczneButton" Content="Działania Matematyczne" HorizontalAlignment="Left" Margin="63,130,0,0" VerticalAlignment="Top" Width="143"/>
+        <Button x:Name="ByloNieByloButton" Content="Było nie było" HorizontalAlignment="Left" Margin="63,210,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="ZapamietywanieButton" Content="Zapamietywanie" HorizontalAlignment="Left" Margin="565,135,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:Name="CzasReakcjiButton" Content="Czas Reakcji" HorizontalAlignment="Left" Margin="596,210,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="ZapamietajNumerButton" Content="Zapamietaj Numer" HorizontalAlignment="Left" Margin="63,297,0,0" VerticalAlignment="Top" Width="114" />
+        <Button x:Name="OdNajmniejszegoButton" Content="Od Najmniejszego" HorizontalAlignment="Left" Margin="596,297,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="AlfabetButton" Content="Alfabet" HorizontalAlignment="Left" Margin="337,344,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

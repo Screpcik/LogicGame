@@ -55,7 +55,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AlfabetWindow.xaml.cs">
+      <DependentUpon>AlfabetWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ByloNieByloWindow.xaml.cs">
+      <DependentUpon>ByloNieByloWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CzasReakcjiWindow.xaml.cs">
+      <DependentUpon>CzasReakcjiWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DzialaniaMatematyczneWindow.xaml.cs">
+      <DependentUpon>DzialaniaMatematyczneWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OdNajmniejszego.xaml.cs">
+      <DependentUpon>OdNajmniejszego.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="ZapamietajNumerWindow.xaml.cs">
+      <DependentUpon>ZapamietajNumerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZapamietywanieWindow.xaml.cs">
+      <DependentUpon>ZapamietywanieWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AlfabetWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ByloNieByloWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CzasReakcjiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DzialaniaMatematyczneWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +106,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OdNajmniejszego.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZapamietajNumerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZapamietywanieWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
