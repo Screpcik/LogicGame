@@ -15,8 +15,8 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="111,263,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="GuessLoginButton" Content="Zaloguj jako gość" HorizontalAlignment="Left" Margin="101,297,0,0" VerticalAlignment="Top" Width="97" FontStyle="Italic">
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="111,263,0,0" VerticalAlignment="Top" Width="75" Click="LoginButton_Click"/>
+        <Button x:Name="GuessLoginButton" Content="Zaloguj jako gość" HorizontalAlignment="Left" Margin="101,297,0,0" VerticalAlignment="Top" Width="97" FontStyle="Italic" Click="GuessLoginButton_Click">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>

@@ -32,6 +32,7 @@ namespace LogicGame
         {
             this.login = login;
             InitializeComponent();
+            LoggedAsLabel.Content = "Zalogowano jako " + login;
         }
         void ChooseGame()
         {

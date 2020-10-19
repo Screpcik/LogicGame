@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,10 +20,27 @@ namespace LogicGame
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    {   
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            otworzOkno(LoginTextBox.Text);
+            this.Close();
+        }
+
+        private void GuessLoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            otworzOkno("Gość");
+            this.Close();
+        }
+        private static void otworzOkno(string nazwa)
+        {
+            MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
+            oknoPoZalogowaniu.Show();        
         }
     }
 }

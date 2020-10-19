@@ -15,6 +15,7 @@
         <Button x:Name="ZapamietajNumerButton" Content="Zapamietaj Numer" HorizontalAlignment="Left" Margin="63,297,0,0" VerticalAlignment="Top" Width="114" />
         <Button x:Name="OdNajmniejszegoButton" Content="Od Najmniejszego" HorizontalAlignment="Left" Margin="596,297,0,0" VerticalAlignment="Top" Width="108"/>
         <Button x:Name="AlfabetButton" Content="Alfabet" HorizontalAlignment="Left" Margin="337,344,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="LoggedAsLabel" Content="Zalogowano jako XXXXXXX" HorizontalAlignment="Left" Margin="266,19,0,0" VerticalAlignment="Top" Width="165"/>
 
     </Grid>
 </Window>
