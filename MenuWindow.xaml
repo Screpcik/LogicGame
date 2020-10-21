@@ -8,14 +8,15 @@
         Title="MenuWindow" Height="450" Width="800">
     <Grid>
         <Label x:Name="TakeGameLabel" Content="Wybierz Grę" HorizontalAlignment="Left" Margin="337,50,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="DzialaniaMatematyczneButton" Content="Działania Matematyczne" HorizontalAlignment="Left" Margin="63,130,0,0" VerticalAlignment="Top" Width="143"/>
-        <Button x:Name="ByloNieByloButton" Content="Było nie było" HorizontalAlignment="Left" Margin="63,210,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ZapamietywanieButton" Content="Zapamietywanie" HorizontalAlignment="Left" Margin="565,135,0,0" VerticalAlignment="Top" Width="106"/>
-        <Button x:Name="CzasReakcjiButton" Content="Czas Reakcji" HorizontalAlignment="Left" Margin="596,210,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ZapamietajNumerButton" Content="Zapamietaj Numer" HorizontalAlignment="Left" Margin="63,297,0,0" VerticalAlignment="Top" Width="114" />
-        <Button x:Name="OdNajmniejszegoButton" Content="Od Najmniejszego" HorizontalAlignment="Left" Margin="596,297,0,0" VerticalAlignment="Top" Width="108"/>
-        <Button x:Name="AlfabetButton" Content="Alfabet" HorizontalAlignment="Left" Margin="337,344,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="DzialaniaMatematyczneButton" Content="Działania Matematyczne" HorizontalAlignment="Left" Margin="63,130,0,0" VerticalAlignment="Top" Width="143" Click="DzialaniaMatematyczneButton_Click"/>
+        <Button x:Name="ByloNieByloButton" Content="Było nie było" HorizontalAlignment="Left" Margin="63,210,0,0" VerticalAlignment="Top" Width="75" Click="ByloNieByloButton_Click"/>
+        <Button x:Name="ZapamietywanieButton" Content="Zapamietywanie" HorizontalAlignment="Left" Margin="565,135,0,0" VerticalAlignment="Top" Width="106" Click="ZapamietywanieButton_Click"/>
+        <Button x:Name="CzasReakcjiButton" Content="Czas Reakcji" HorizontalAlignment="Left" Margin="596,210,0,0" VerticalAlignment="Top" Width="75" Click="CzasReakcjiButton_Click"/>
+        <Button x:Name="ZapamietajNumerButton" Content="Zapamietaj Numer" HorizontalAlignment="Left" Margin="63,297,0,0" VerticalAlignment="Top" Width="114" Click="ZapamietajNumerButton_Click" />
+        <Button x:Name="OdNajmniejszegoButton" Content="Od Najmniejszego" HorizontalAlignment="Left" Margin="596,297,0,0" VerticalAlignment="Top" Width="108" Click="OdNajmniejszegoButton_Click"/>
+        <Button x:Name="AlfabetButton" Content="Alfabet" HorizontalAlignment="Left" Margin="337,344,0,0" VerticalAlignment="Top" Width="75" Click="AlfabetButton_Click"/>
         <Label x:Name="LoggedAsLabel" Content="Zalogowano jako XXXXXXX" HorizontalAlignment="Left" Margin="266,19,0,0" VerticalAlignment="Top" Width="165"/>
+        <Button x:Name="RankButton" Content="Ranking" HorizontalAlignment="Left" Margin="412,155,0,0" VerticalAlignment="Top" Width="75" Click="RankButton_Click"/>
 
     </Grid>
 </Window>

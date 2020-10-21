@@ -70,6 +70,9 @@
     <Compile Include="OdNajmniejszego.xaml.cs">
       <DependentUpon>OdNajmniejszego.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RankingWindow.xaml.cs">
+      <DependentUpon>RankingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="ZapamietajNumerWindow.xaml.cs">
       <DependentUpon>ZapamietajNumerWindow.xaml</DependentUpon>
@@ -110,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OdNajmniejszego.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RankingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
