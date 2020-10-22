@@ -28,7 +28,6 @@ namespace LogicGame
     public partial class MenuWindow : Window
     {
         string login;
-        int buttonNumber;
         public MenuWindow(string login)
         {
             this.login = login;
