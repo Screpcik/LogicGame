@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="ByloNieByloWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="SlowoLabel" Content="Label" HorizontalAlignment="Left" Margin="360,123,0,0" VerticalAlignment="Top" Height="27" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1800.667"/>
+                    <TranslateTransform X="-0.348" Y="0.642"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="ByloButton" Content="Bylo" HorizontalAlignment="Left" Margin="231,222,0,0" VerticalAlignment="Top" Width="75" Click="ByloButton_Click"/>
+        <Button x:Name="NieByloButton" Content="Nie bylo" HorizontalAlignment="Left" Margin="440,222,0,0" VerticalAlignment="Top" Width="75" Click="NieByloButton_Click"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="387,287,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+
     </Grid>
 </Window>

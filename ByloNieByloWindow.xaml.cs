@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,9 +20,111 @@ namespace LogicGame
     /// </summary>
     public partial class ByloNieByloWindow : Window
     {
+        string wylosowane = "";
+        int pkt = 0;
+        int x;
+        Random rnd = new Random();
+        List<string> WylosowaneSlowa = new List<string>();
+        List<string> Slowa = new List<string>();
         public ByloNieByloWindow()
-        {
+        {          
             InitializeComponent();
+            SlowoLabel.Content = "Wcisnij start";
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            Slowa.Add("szaławiła");
+            Slowa.Add("ladaco");
+            Slowa.Add("wykidajło");
+            Slowa.Add("basałyk");
+            Slowa.Add("urwipołeć");
+            Slowa.Add("melepeta");
+            Slowa.Add("koafiura");
+            Slowa.Add("wiktuały");
+            Slowa.Add("ramota");
+            Slowa.Add("humbug");
+            Slowa.Add("monidło");
+            Slowa.Add("blurb");
+            Slowa.Add("prodiż");
+            Slowa.Add("wszeteczeństwo");
+            Slowa.Add("frymuśny");
+            Slowa.Add("buńczuczny");
+            Slowa.Add("ciekawy");
+            Slowa.Add("ciekawski");
+            Slowa.Add("ciekawostka");
+            Slowa.Add("mały");
+            Slowa.Add("mniejszy");
+            Slowa.Add("malutki");
+            Slowa.Add("małostkowy");
+            Slowa.Add("klik");
+            Slowa.Add("klikać");
+            Slowa.Add("klikanie");
+            Slowa.Add("klikał");
+            Slowa.Add("nacisnął");
+            Slowa.Add("długi");
+            Slowa.Add("długa");
+            Slowa.Add("długie");
+            Slowa.Add("miasto");
+            Slowa.Add("miasteczko");
+            Slowa.Add("mieszczanin");
+            Slowa.Add("wieś");
+            Slowa.Add("buda");
+            losuj();
+        }
+
+        private void NieByloButton_Click(object sender, RoutedEventArgs e)
+        {
+            check("bylo");
+        }
+
+        private void ByloButton_Click(object sender, RoutedEventArgs e)
+        {
+            check("nie bylo");
+        }
+        void losuj()
+        {
+            x = rnd.Next(0, Slowa.Count - 1);
+            SlowoLabel.Content = Slowa[x];
+            if (!WylosowaneSlowa.Contains(Slowa[x]))
+            {
+                WylosowaneSlowa.Add(Slowa[x]);
+            }
+            wylosowane = Slowa[x];
+        }
+        void check(string czybylo)
+        {
+            //If ma zły warunek trzzeba poprawic.
+            switch (czybylo)
+            {
+                case "bylo":
+                    if (WylosowaneSlowa.Exists(Element => Element.Equals(wylosowane)))
+                    {
+                        pkt++;
+                        losuj();
+                    }
+                    else
+                    {
+                        SlowoLabel.Content = "przegrales " + pkt + " pkt.";
+                        WylosowaneSlowa.Clear();
+                        pkt = 0; 
+                    }
+                    break;
+
+                case "nie bylo":
+                    if ()
+                    {
+                        pkt++;
+                        losuj();
+                    }
+                    else
+                    {
+                        SlowoLabel.Content = "przegrales " + pkt + " pkt.";
+                        WylosowaneSlowa.Clear();
+                        pkt = 0;
+                    }
+                    break;
+            }
         }
     }
 }
