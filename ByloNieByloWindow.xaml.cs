@@ -26,6 +26,7 @@ namespace LogicGame
         Random rnd = new Random();
         List<string> WylosowaneSlowa = new List<string>();
         List<string> Slowa = new List<string>();
+        bool bylo = false;
         public ByloNieByloWindow()
         {          
             InitializeComponent();
@@ -75,56 +76,56 @@ namespace LogicGame
 
         private void NieByloButton_Click(object sender, RoutedEventArgs e)
         {
-            check("bylo");
+            check();
+            if (!bylo)
+            {
+                pkt++;
+                losuj();
+            }
+            else
+            {
+                SlowoLabel.Content = "przegrales " + pkt + " pkt.";
+                WylosowaneSlowa.Clear();
+                pkt = 0;
+            }
         }
 
         private void ByloButton_Click(object sender, RoutedEventArgs e)
         {
-            check("nie bylo");
+            check();
+            if (bylo)
+            {
+                pkt++;
+                losuj();
+            }
+            else
+            {
+                SlowoLabel.Content = "przegrales " + pkt + " pkt.";
+                WylosowaneSlowa.Clear();
+                pkt = 0;
+            }
+            bylo = false;
         }
         void losuj()
         {
             x = rnd.Next(0, Slowa.Count - 1);
             SlowoLabel.Content = Slowa[x];
+            wylosowane = Slowa[x];
+        }
+        void check()
+        {
+            for (int i = 0; i < WylosowaneSlowa.Count; i++)
+            {
+                if (WylosowaneSlowa[i].Contains(wylosowane))
+                {
+                    bylo = true;
+                }
+            }
             if (!WylosowaneSlowa.Contains(Slowa[x]))
             {
                 WylosowaneSlowa.Add(Slowa[x]);
             }
-            wylosowane = Slowa[x];
-        }
-        void check(string czybylo)
-        {
-            //If ma zły warunek trzzeba poprawic.
-            switch (czybylo)
-            {
-                case "bylo":
-                    if (WylosowaneSlowa.Exists(Element => Element.Equals(wylosowane)))
-                    {
-                        pkt++;
-                        losuj();
-                    }
-                    else
-                    {
-                        SlowoLabel.Content = "przegrales " + pkt + " pkt.";
-                        WylosowaneSlowa.Clear();
-                        pkt = 0; 
-                    }
-                    break;
-
-                case "nie bylo":
-                    if ()
-                    {
-                        pkt++;
-                        losuj();
-                    }
-                    else
-                    {
-                        SlowoLabel.Content = "przegrales " + pkt + " pkt.";
-                        WylosowaneSlowa.Clear();
-                        pkt = 0;
-                    }
-                    break;
-            }
         }
     }
-}
+ }
+
