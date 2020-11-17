@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using System.Text.RegularExpressions;
 
 namespace LogicGame
 {
@@ -19,9 +21,75 @@ namespace LogicGame
     /// </summary>
     public partial class OdNajmniejszego : Window
     {
+        int timeelapsed = 0;
+        int liczba;
+        int licznik = 0;
+        DispatcherTimer timer = new DispatcherTimer();
+        Random rnd = new Random();
+        List<int> liczby = new List<int>();
         public OdNajmniejszego()
         {
             InitializeComponent();
+        }
+        void randomize()
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                liczba = rnd.Next(0, 100);
+                liczby.Add(liczba);
+                NumbersLabel.Content += liczba.ToString() + " ";
+                liczby.Sort();
+            }
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            AnswerTextBox.Text = "";
+            randomize();
+            AnswerTextBox.IsEnabled = true;
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+        public void timer_Tick(object sender, EventArgs e)
+        {
+            timeelapsed++;
+        }
+
+        private void AnswerTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                check();
+                AnswerTextBox.Text = "";              
+            }
+        }
+        
+        public bool check()
+        {
+            if (AnswerTextBox.Text == liczby[licznik].ToString())
+            {
+                JustLabel.Content = "najs " + licznik;
+                licznik++;
+                if(licznik == 15)
+                {
+                    JustLabel.Content = "Brawo wygrałeś zajęło Ci to:";
+                    NumbersLabel.Content = timeelapsed.ToString() + " sekundy.";
+                    liczby.Clear();
+                    AnswerTextBox.IsEnabled = false;
+                }
+                return true;
+            }
+            else
+            {
+                JustLabel.Content = "Wprowadziles zla liczbe";
+                return false;
+            }
         }
     }
 }
