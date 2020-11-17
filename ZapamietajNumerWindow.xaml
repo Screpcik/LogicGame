@@ -8,7 +8,7 @@
         Title="ZapamietajNumerWindow" Height="450" Width="800">
     <Grid>
         <Label x:Name="LiczbaLabel" Content="Label" HorizontalAlignment="Left" Margin="227,123,0,0" VerticalAlignment="Top" Width="261"/>
-        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="23" Margin="285,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown"/>
+        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="23" Margin="200,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="353" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown"/>
         <Button x:Name="StartButton" Content="Button" HorizontalAlignment="Left" Margin="331,270,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
 
     </Grid>

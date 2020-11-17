@@ -79,7 +79,7 @@ namespace LogicGame
                 if(licznik == 15)
                 {
                     JustLabel.Content = "Brawo wygrałeś zajęło Ci to:";
-                    NumbersLabel.Content = timeelapsed.ToString() + " sekundy.";
+                    NumbersLabel.Content = timeelapsed.ToString() + ".0 sekundy.";
                     liczby.Clear();
                     AnswerTextBox.IsEnabled = false;
                 }

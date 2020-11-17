@@ -65,7 +65,7 @@ namespace LogicGame
             Slowa.Add("nacisnął");
             Slowa.Add("długi");
             Slowa.Add("długa");
-            Slowa.Add("długie");
+            Slowa.Add("długe");
             Slowa.Add("miasto");
             Slowa.Add("miasteczko");
             Slowa.Add("mieszczanin");

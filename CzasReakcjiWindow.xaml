@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="CzasReakcjiWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="ReactionButton" Content="Button" HorizontalAlignment="Left" Margin="143,147,0,0" VerticalAlignment="Top" Width="397" Click="ReactionButton_Click" IsEnabled="False"/>
+        <Button x:Name="StartButton" Content="Button" HorizontalAlignment="Left" Margin="357,262,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+
     </Grid>
 </Window>
