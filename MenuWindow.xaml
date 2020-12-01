@@ -5,18 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="MenuWindow" Height="450" Width="800">
-    <Grid>
-        <Label x:Name="TakeGameLabel" Content="Wybierz Grę" HorizontalAlignment="Left" Margin="337,50,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="DzialaniaMatematyczneButton" Content="Działania Matematyczne" HorizontalAlignment="Left" Margin="63,130,0,0" VerticalAlignment="Top" Width="143" Click="DzialaniaMatematyczneButton_Click"/>
-        <Button x:Name="ByloNieByloButton" Content="Było nie było" HorizontalAlignment="Left" Margin="63,210,0,0" VerticalAlignment="Top" Width="75" Click="ByloNieByloButton_Click"/>
-        <Button x:Name="ZapamietywanieButton" Content="Zapamietywanie" HorizontalAlignment="Left" Margin="565,135,0,0" VerticalAlignment="Top" Width="106" Click="ZapamietywanieButton_Click"/>
-        <Button x:Name="CzasReakcjiButton" Content="Czas Reakcji" HorizontalAlignment="Left" Margin="596,210,0,0" VerticalAlignment="Top" Width="75" Click="CzasReakcjiButton_Click"/>
-        <Button x:Name="ZapamietajNumerButton" Content="Zapamietaj Numer" HorizontalAlignment="Left" Margin="63,297,0,0" VerticalAlignment="Top" Width="114" Click="ZapamietajNumerButton_Click" />
-        <Button x:Name="OdNajmniejszegoButton" Content="Od Najmniejszego" HorizontalAlignment="Left" Margin="596,297,0,0" VerticalAlignment="Top" Width="108" Click="OdNajmniejszegoButton_Click"/>
-        <Button x:Name="AlfabetButton" Content="Alfabet" HorizontalAlignment="Left" Margin="337,344,0,0" VerticalAlignment="Top" Width="75" Click="AlfabetButton_Click"/>
-        <Label x:Name="LoggedAsLabel" Content="Zalogowano jako XXXXXXX" HorizontalAlignment="Left" Margin="266,19,0,0" VerticalAlignment="Top" Width="165"/>
-        <Button x:Name="RankButton" Content="Ranking" HorizontalAlignment="Left" Margin="412,155,0,0" VerticalAlignment="Top" Width="75" Click="RankButton_Click"/>
+        Title="MenuWindow" Height="335.156" Width="412.11">
+    <Grid Margin="0,0,2,4" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="TakeGameLabel" Content="Wybierz Grę" HorizontalAlignment="Left" Margin="156,41,0,0" VerticalAlignment="Top" Height="26" Width="75"/>
+        <Button x:Name="DzialaniaMatematyczneButton" Content="Działania Matematyczne" HorizontalAlignment="Left" Margin="12,72,0,0" VerticalAlignment="Top" Width="186" Click="DzialaniaMatematyczneButton_Click" Height="70"/>
+        <Button x:Name="ByloNieByloButton" Content="Było nie było" HorizontalAlignment="Left" Margin="12,147,0,0" VerticalAlignment="Top" Width="186" Click="ByloNieByloButton_Click" Height="70"/>
+        <Button x:Name="CzasReakcjiButton" Content="Czas Reakcji" HorizontalAlignment="Left" Margin="203,147,0,0" VerticalAlignment="Top" Width="186" Click="CzasReakcjiButton_Click" Height="70"/>
+        <Button x:Name="ZapamietajNumerButton" Content="Zapamietaj Numer" HorizontalAlignment="Left" Margin="203,72,0,0" VerticalAlignment="Top" Width="186" Click="ZapamietajNumerButton_Click" Height="70" />
+        <Button x:Name="OdNajmniejszegoButton" Content="Od Najmniejszego" HorizontalAlignment="Left" Margin="12,222,0,0" VerticalAlignment="Top" Width="186" Click="OdNajmniejszegoButton_Click" Height="70"/>
+        <Label x:Name="LoggedAsLabel" Content="Zalogowano jako XXXXXXX" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top" Width="215" Height="26"/>
+        <Button x:Name="RankButton" Content="Ranking" HorizontalAlignment="Left" Margin="203,222,0,0" VerticalAlignment="Top" Width="186" Click="RankButton_Click" Height="70"/>
+        <Button x:Name="ExitButton" Content="X" HorizontalAlignment="Left" Margin="339,6,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="ExitButton_Click"/>
 
     </Grid>
 </Window>

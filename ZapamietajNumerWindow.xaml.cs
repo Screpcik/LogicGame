@@ -46,12 +46,13 @@ namespace LogicGame
         void timer_Tick(object sender, EventArgs e)
         {
             if(LabelTime % 4 != 0 )
-            {                
+            {              
                 LabelTime++;
             }
             if (LabelTime % 4 == 0)
             {
                 timer.Stop();
+                AnswerTextBox.IsEnabled = true;
                 LiczbaLabel.Content = "Wpisz liczbę poniżej";
             }
 
@@ -61,7 +62,8 @@ namespace LogicGame
         {
             if (e.Key == Key.Enter)
             {
-                if(AnswerTextBox.Text == liczba)
+                AnswerTextBox.IsEnabled = false;
+                if (AnswerTextBox.Text == liczba)
                 {
                     LabelTime = 1;
                     Generate();

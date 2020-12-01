@@ -18,7 +18,6 @@ namespace LogicGame
     /// Logika interakcji dla klasy MenuWindow.xaml
     /// </summary>
     /// 1 - Działania Matematyczne
-    /// 2 - Zapamiętywanie
     /// 3 - było nie było
     /// 4 - czas reakcji
     /// 5 - Zapamiętaj Numer
@@ -42,11 +41,6 @@ namespace LogicGame
                     DzialaniaMatematyczneWindow dzialaniaMatematyczneWindow = new DzialaniaMatematyczneWindow();
                     dzialaniaMatematyczneWindow.Show();
     
-                    break;
-
-                case 2:
-                    ZapamietywanieWindow zapamietywanieWindow = new ZapamietywanieWindow();
-                    zapamietywanieWindow.Show();
                     break;
 
                 case 3:
@@ -128,6 +122,11 @@ namespace LogicGame
         private void RankButton_Click(object sender, RoutedEventArgs e)
         {
             ChooseGame(8);
+            this.Close();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }

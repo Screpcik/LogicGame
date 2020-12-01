@@ -37,7 +37,7 @@ namespace LogicGame
             {
                 liczba = rnd.Next(0, 100);
                 liczby.Add(liczba);
-                NumbersLabel.Content += liczba.ToString() + " ";
+                NumbersLabel.Content += liczba.ToString() + ", ";
                 liczby.Sort();
             }
         }

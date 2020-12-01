@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="DzialaniaMatematyczneWindow" Height="450" Width="800">
+        Title="DzialaniaMatematyczneWindow" Height="306.658" Width="270.104">
     <Grid>
-        <Label x:Name="FirstNumberLabel" Content="Pierwsza liczba" HorizontalAlignment="Left" Margin="146,182,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="SecondNumberLabel" Content="Druga liczba" HorizontalAlignment="Left" Margin="500,182,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="SymbolLabel" Content="Znak" HorizontalAlignment="Left" Margin="342,182,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ResultTextBox" HorizontalAlignment="Left" Height="23" Margin="312,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="ResultTextBox_KeyDown" PreviewTextInput="NumberValidationTextBox"/>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="342,297,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
-        <Label x:Name="WynikLabel" Content="Label" HorizontalAlignment="Left" Margin="329,81,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="AnswerLabel" Content="Label" HorizontalAlignment="Left" Margin="329,112,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label x:Name="TimeleftLabel" Content="Label" HorizontalAlignment="Left" Margin="536,123,0,0" VerticalAlignment="Top" Width="246"/>
+        <Label x:Name="FirstNumberLabel" Content="" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="57" FontSize="36"/>
+        <Label x:Name="SecondNumberLabel" Content="" HorizontalAlignment="Left" Margin="189,126,0,0" VerticalAlignment="Top" FontSize="36" Width="60"/>
+        <Label x:Name="SymbolLabel" Content="" HorizontalAlignment="Left" Margin="107,126,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <TextBox x:Name="ResultTextBox" HorizontalAlignment="Left" Height="23" Margin="10,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239" KeyDown="ResultTextBox_KeyDown" PreviewTextInput="NumberValidationTextBox"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Width="239" Click="StartButton_Click" Height="49">
+        </Button>
+        <Label x:Name="WynikLabel" Content="" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="AnswerLabel" Content="" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="239" FontSize="18"/>
+        <Label x:Name="TimeleftLabel" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="246" FontSize="18"/>
 
     </Grid>
 </Window>

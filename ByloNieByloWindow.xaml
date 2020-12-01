@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="ByloNieByloWindow" Height="450" Width="800">
+        Title="ByloNieByloWindow" Height="324.282" Width="398.172">
     <Grid>
-        <Label x:Name="SlowoLabel" Content="Label" HorizontalAlignment="Left" Margin="360,123,0,0" VerticalAlignment="Top" Height="27" >
+        <Label x:Name="SlowoLabel" Content="Label" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" Height="69" Width="294" FontSize="36" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,9 +17,9 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="ByloButton" Content="Bylo" HorizontalAlignment="Left" Margin="231,222,0,0" VerticalAlignment="Top" Width="75" Click="ByloButton_Click"/>
-        <Button x:Name="NieByloButton" Content="Nie bylo" HorizontalAlignment="Left" Margin="440,222,0,0" VerticalAlignment="Top" Width="75" Click="NieByloButton_Click"/>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="387,287,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+        <Button x:Name="ByloButton" Content="Bylo" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="150" Click="ByloButton_Click" Height="75"/>
+        <Button x:Name="NieByloButton" Content="Nie bylo" HorizontalAlignment="Left" Margin="233,134,0,0" VerticalAlignment="Top" Width="150" Click="NieByloButton_Click" Height="75"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="373" Click="StartButton_Click" Height="69"/>
 
     </Grid>
 </Window>

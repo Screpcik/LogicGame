@@ -35,11 +35,11 @@ namespace LogicGame
                 {
                     ResultTextBox.Text = "";
                     wynikPunktowy++;
-                    WynikLabel.Content = wynikPunktowy.ToString();
+                    WynikLabel.Content = "Posiadasz " + wynikPunktowy.ToString() + "pkt.";
                     randomize();
-                    AnswerLabel.Content = "Brawo dobra odpowiedz";
+                    AnswerLabel.Content = "Brawo dobra odpowiedź.";
                 }
-                else AnswerLabel.Content = "Niestety spróbuj ponownie";
+                else AnswerLabel.Content = "Niestety spróbuj ponownie.";
             }
         }
         private void StartButton_Click(object sender, RoutedEventArgs e)

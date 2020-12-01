@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="CzasReakcjiWindow" Height="450" Width="800">
+        Title="CzasReakcjiWindow" Height="311.358" Width="332.376">
     <Grid>
-        <Button x:Name="ReactionButton" Content="Button" HorizontalAlignment="Left" Margin="143,147,0,0" VerticalAlignment="Top" Width="397" Click="ReactionButton_Click" IsEnabled="False"/>
-        <Button x:Name="StartButton" Content="Button" HorizontalAlignment="Left" Margin="357,262,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+        <Button x:Name="ReactionButton" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Click="ReactionButton_Click" IsEnabled="False" Height="150"/>
+        <Button x:Name="StartButton" Content="Pierw ten button potem ten u góry" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="300" Click="StartButton_Click" Height="100"/>
 
     </Grid>
 </Window>

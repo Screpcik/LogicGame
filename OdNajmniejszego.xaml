@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="OdNajmniejszego" Height="450" Width="800">
+        Title="OdNajmniejszego" Height="320.757" Width="683.681">
     <Grid>
-        <Label x:Name="NumbersLabel" Content="" HorizontalAlignment="Left" Margin="53,105,0,0" VerticalAlignment="Top" Width="667"/>
-        <Label x:Name="JustLabel" Content="Wpisz podane niżej liczby w kolejności od najmiejszej po kazdej niciśnij enter." HorizontalAlignment="Left" Margin="53,42,0,0" VerticalAlignment="Top" Width="431"/>
-        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="23" Margin="317,197,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown"/>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="375,255,0,0" VerticalAlignment="Top" Width="75" Click="StartButton_Click"/>
+        <Label x:Name="NumbersLabel" Content="" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="667" FontSize="18" Height="64"/>
+        <Label x:Name="JustLabel" Content="Wpisz podane niżej liczby w kolejności od najmiejszej po kazdej naciśnij enter." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="556" FontSize="16"/>
+        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="62" Margin="245,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" IsEnabled="False" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown" FontSize="24"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="245,224,0,0" VerticalAlignment="Top" Width="167" Click="StartButton_Click" Height="56"/>
 
     </Grid>
 </Window>
