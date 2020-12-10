@@ -11,7 +11,7 @@ namespace LogicGame
     {
         public void updateDateBase(string nazwa, int punkty, string gra)
         {
-            string connectionString = "server=logicgames.j.pl;uid=LogicGames;pwd=Log!cGame5;database=screpcik";
+            string connectionString = "server=***;uid=LogicGames;pwd=***;database=screpcik";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
