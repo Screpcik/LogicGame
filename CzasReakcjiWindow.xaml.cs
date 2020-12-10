@@ -23,8 +23,10 @@ namespace LogicGame
         List<long> timesTested = new List<long>();
         Random random = new Random();
         Stopwatch stopwatch = new Stopwatch();
-        public CzasReakcjiWindow()
+        string nazwa;
+        public CzasReakcjiWindow(string nick)
         {
+            nazwa = nick;
             InitializeComponent();
         }
 
@@ -39,6 +41,10 @@ namespace LogicGame
                                                        timesTested[timesTested.Count - 1]);
                 if (timesTested.Count == 3)
                 {
+                    int suma = Convert.ToInt32(timesTested[0]) + Convert.ToInt32(timesTested[1]) + Convert.ToInt32(timesTested[2]);
+                    int wynik = suma / 3;
+                    User user = new User();
+                    user.updateDateBase(nazwa, wynik, "Czas Reakcji");
                     MessageBox.Show("Osiągnąłeś czasy: " + String.Join(", ", timesTested.ToArray()));
                 }
             }

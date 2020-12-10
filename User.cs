@@ -11,35 +11,32 @@ namespace LogicGame
     {
         public void updateDateBase(string nazwa, int punkty, string gra)
         {
-            string czyJestWBazie = "";
             string connectionString = "server=logicgames.j.pl;uid=LogicGames;pwd=Log!cGame5;database=screpcik";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT COUNT(*) FROM ranking WHERE (Nick = '@param1' AND Gra = '@param2')";
-            cmd.Parameters.AddWithValue("@param1", nazwa);
-            cmd.Parameters.AddWithValue("@param2", gra);
-            MySqlDataReader dr = cmd.ExecuteReader();
-            //int czyJestWBazie = int.Parse(dt.Rows[0].Field<string>(0));
-            // Console.WriteLine(czyJestWBazie);
-            while (dr.Read())
+            cmd.CommandText = "SELECT COUNT(*) FROM ranking WHERE (Nick = '"+ nazwa +  "' AND Gra = '" + gra + "')";
+            int UserExist = Convert.ToInt32(cmd.ExecuteScalar());
+            if (UserExist > 0)
             {
-                string chuj = dr[0].ToString();
-                Console.WriteLine(chuj);
+                Console.WriteLine("Record exists");
+                MySqlCommand updateUser = connection.CreateCommand();
+                updateUser.CommandType = CommandType.Text;
+                updateUser.CommandText = "UPDATE ranking " +
+                                         "SET Punkty="+ punkty +
+                                         " WHERE (Nick = '" + nazwa + "' AND Gra = '" + gra + "')";
+                updateUser.ExecuteNonQuery();
+
             }
-            if (czyJestWBazie == "-1") //Jeśli nie ma takiego usera.
+            else
             {
-                MySqlCommand addUserAndPoints = new MySqlCommand("INSERT INTO ranking(Nick, Punkty, Gra) VALUES(@param1, @param2, @param3)", connection);
-                addUserAndPoints.Parameters.AddWithValue("@param1", nazwa);
-                addUserAndPoints.Parameters.AddWithValue("@param2", punkty);
-                addUserAndPoints.Parameters.AddWithValue("@param3", gra);
-                addUserAndPoints.ExecuteNonQuery();
-                connection.Close();
-            }
-            else                    // jesli jest
-            {
-                MySqlCommand updateUsersPoints = new MySqlCommand("");
+                Console.WriteLine("Record does not exist");
+                MySqlCommand addUser = connection.CreateCommand();
+                addUser.CommandType = CommandType.Text;
+                addUser.CommandText = "INSERT INTO ranking " +
+                                      "VALUES ('" + nazwa + "','" + punkty + "','" + gra + "')";
+                addUser.ExecuteNonQuery();
             }
         }
     }

@@ -19,8 +19,10 @@ namespace LogicGame
     /// </summary>
     public partial class AlfabetWindow : Window
     {
-        public AlfabetWindow()
+        string nazwa;
+        public AlfabetWindow(string nick)
         {
+            nazwa = nick;
             InitializeComponent();
         }
     }

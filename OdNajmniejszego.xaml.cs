@@ -26,9 +26,11 @@ namespace LogicGame
         int licznik = 0;
         DispatcherTimer timer = new DispatcherTimer();
         Random rnd = new Random();
+        string nazwa;
         List<int> liczby = new List<int>();
-        public OdNajmniejszego()
+        public OdNajmniejszego(string nick)
         {
+            nazwa = nick;
             InitializeComponent();
         }
         void randomize()
@@ -44,6 +46,7 @@ namespace LogicGame
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
+            timeelapsed = 0;
             AnswerTextBox.Text = "";
             randomize();
             AnswerTextBox.IsEnabled = true;
@@ -82,6 +85,9 @@ namespace LogicGame
                     NumbersLabel.Content = timeelapsed.ToString() + ".0 sekundy.";
                     liczby.Clear();
                     AnswerTextBox.IsEnabled = false;
+                    User user = new User();
+                    user.updateDateBase(nazwa, timeelapsed, "Od Najmniejszego");
+                    timer.Stop();
                 }
                 return true;
             }

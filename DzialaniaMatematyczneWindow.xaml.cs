@@ -73,7 +73,7 @@ namespace LogicGame
                 SecondNumber = -122;
                 ResultTextBox.Text = "";
                 TimeleftLabel.Content = "Koniec Gry. Uzyskałeś " + wynikPunktowy + " punktów.";
-                if(isPlaying) user.updateDateBase(nazwa, wynikPunktowy, "DzialaniaMatematyczne");
+                if(isPlaying) user.updateDateBase(nazwa, wynikPunktowy, "Dzialania Matematyczne");
                 isPlaying = false;
             }
         }

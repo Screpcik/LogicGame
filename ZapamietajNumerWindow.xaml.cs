@@ -17,11 +17,13 @@ namespace LogicGame
         string liczba;
         int pliczba;
         int LabelTime = 1;
+        string nazwa;
         int wynik;
         Random rnd = new Random();
         DispatcherTimer timer = new DispatcherTimer();
-        public ZapamietajNumerWindow()
+        public ZapamietajNumerWindow(string nick)
         {
+            nazwa = nick;
             InitializeComponent();
         }
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -72,6 +74,8 @@ namespace LogicGame
                 {
                     wynik = liczba.Length;
                     LiczbaLabel.Content = "Przegrałeś twój wynik to " + wynik;
+                    User user = new User();
+                    user.updateDateBase(nazwa, wynik, "Zapamiętaj Numer");
                 }
             }
 

@@ -27,8 +27,10 @@ namespace LogicGame
         List<string> WylosowaneSlowa = new List<string>();
         List<string> Slowa = new List<string>();
         bool bylo = false;
-        public ByloNieByloWindow()
-        {          
+        string nazwa;
+        public ByloNieByloWindow(string nick)
+        {
+            nazwa = nick;
             InitializeComponent();
             SlowoLabel.Content = "Wcisnij start";
         }
@@ -84,7 +86,9 @@ namespace LogicGame
             }
             else
             {
+                User user = new User();
                 SlowoLabel.Content = "przegrales " + pkt + " pkt.";
+                user.updateDateBase(nazwa, pkt, "Bylo Nie Bylo");
                 WylosowaneSlowa.Clear();
                 pkt = 0;
             }
@@ -100,7 +104,9 @@ namespace LogicGame
             }
             else
             {
+                User user = new User();
                 SlowoLabel.Content = "przegrales " + pkt + " pkt.";
+                user.updateDateBase(nazwa, pkt, "Bylo Nie Bylo");
                 WylosowaneSlowa.Clear();
                 pkt = 0;
             }

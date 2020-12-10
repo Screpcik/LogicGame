@@ -38,33 +38,33 @@ namespace LogicGame
             switch (button)
             {
                 case 1:
-                    DzialaniaMatematyczneWindow dzialaniaMatematyczneWindow = new DzialaniaMatematyczneWindow(nick);
+                    DzialaniaMatematyczneWindow dzialaniaMatematyczneWindow = new DzialaniaMatematyczneWindow(nick); //done
                     dzialaniaMatematyczneWindow.Show();
     
                     break;
 
                 case 3:
-                    ByloNieByloWindow byloNieByloWindow = new ByloNieByloWindow();
+                    ByloNieByloWindow byloNieByloWindow = new ByloNieByloWindow(nick); //done
                     byloNieByloWindow.Show();
                     break;
 
                 case 4:
-                    CzasReakcjiWindow czasReakcjiWindow = new CzasReakcjiWindow();
+                    CzasReakcjiWindow czasReakcjiWindow = new CzasReakcjiWindow(nick); //done
                     czasReakcjiWindow.Show();
                     break;
 
                 case 5:
-                    ZapamietajNumerWindow zapamietajNumerWindow = new ZapamietajNumerWindow();
+                    ZapamietajNumerWindow zapamietajNumerWindow = new ZapamietajNumerWindow(nick); //done
                     zapamietajNumerWindow.Show();
                     break;
 
                 case 6:
-                    OdNajmniejszego odNajmniejszego = new OdNajmniejszego();
+                    OdNajmniejszego odNajmniejszego = new OdNajmniejszego(nick); //done
                     odNajmniejszego.Show();
                     break;
 
                 case 7:
-                    AlfabetWindow alfabetWindow = new AlfabetWindow();
+                    AlfabetWindow alfabetWindow = new AlfabetWindow(nick); //database
                     alfabetWindow.Show();
                     break;
 
