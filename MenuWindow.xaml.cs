@@ -26,10 +26,10 @@ namespace LogicGame
     /// 8 - Ranking
     public partial class MenuWindow : Window
     {
-        string login;
+        string nick;
         public MenuWindow(string login)
         {
-            this.login = login;
+            nick = login;
             InitializeComponent();
             LoggedAsLabel.Content = "Zalogowano jako " + login;
         }
@@ -38,7 +38,7 @@ namespace LogicGame
             switch (button)
             {
                 case 1:
-                    DzialaniaMatematyczneWindow dzialaniaMatematyczneWindow = new DzialaniaMatematyczneWindow();
+                    DzialaniaMatematyczneWindow dzialaniaMatematyczneWindow = new DzialaniaMatematyczneWindow(nick);
                     dzialaniaMatematyczneWindow.Show();
     
                     break;

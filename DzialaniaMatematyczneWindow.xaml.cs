@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Text.RegularExpressions;
 using System.Windows.Threading;
+using MySql.Data.MySqlClient;
 namespace LogicGame
 {
     /// <summary>
@@ -18,8 +19,12 @@ namespace LogicGame
         int wynik;
         Random rnd = new Random();
         DispatcherTimer timer = new DispatcherTimer();
-        public DzialaniaMatematyczneWindow()
+        string nazwa;
+        User user = new User();
+        bool isPlaying = false;
+        public DzialaniaMatematyczneWindow(string nick)
         {
+            nazwa = nick;
             InitializeComponent();
         }
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -44,7 +49,8 @@ namespace LogicGame
         }
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            Timeleft = 30;          
+            Timeleft = 3;
+            isPlaying = true;
             randomize();
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -61,12 +67,15 @@ namespace LogicGame
             }
             else
             {
+                timer.Stop();
                 IsStopped = true;
                 FirstNumber = -123;
                 SecondNumber = -122;
                 ResultTextBox.Text = "";
                 TimeleftLabel.Content = "Koniec Gry. Uzyskałeś " + wynikPunktowy + " punktów.";
-            }           
+                if(isPlaying) user.updateDateBase(nazwa, wynikPunktowy, "DzialaniaMatematyczne");
+                isPlaying = false;
+            }
         }
         void randomize()
         {

@@ -15,25 +15,9 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="111,263,0,0" VerticalAlignment="Top" Width="75" Click="LoginButton_Click"/>
-        <Button x:Name="GuessLoginButton" Content="Zaloguj jako gość" HorizontalAlignment="Left" Margin="101,297,0,0" VerticalAlignment="Top" Width="97" FontStyle="Italic" Click="GuessLoginButton_Click">
-            <Button.BorderBrush>
-                <ImageBrush/>
-            </Button.BorderBrush>
-            <Button.OpacityMask>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FFCD0B0B" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.OpacityMask>
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" Margin="101,125,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="101,169,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="LoginLabel" Content="Login" HorizontalAlignment="Left" Margin="40,125,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="PasswordLabel" Content="Hasło" HorizontalAlignment="Left" Margin="40,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.044,-0.012"/>
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="40,203,0,0" VerticalAlignment="Top" Width="179" Click="LoginButton_Click"/>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" Margin="99,163,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LoginLabel" Content="Nick" HorizontalAlignment="Left" Margin="40,159,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

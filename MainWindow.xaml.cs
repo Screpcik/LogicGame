@@ -13,14 +13,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MySql.Data.MySqlClient;
 namespace LogicGame
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {   
+    {
         public MainWindow()
         {
             InitializeComponent();
@@ -28,17 +28,14 @@ namespace LogicGame
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            User user = new User();
             otworzOkno(LoginTextBox.Text);
             this.Close();
         }
 
-        private void GuessLoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            otworzOkno("Gość");
-            this.Close();
-        }
         private static void otworzOkno(string nazwa)
         {
+
             MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
             oknoPoZalogowaniu.Show();        
         }

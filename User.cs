@@ -1,32 +1,46 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using System.Linq;
-using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
-
+using MySql.Data.MySqlClient;
 namespace LogicGame
-{
-    public class User
+{ 
+    class User
     {
-        public int Id;
-        public string UserName;
-        public string Password;
-        public User(int Id, string login, string password)
+        public void updateDateBase(string nazwa, int punkty, string gra)
         {
-            this.Id = Id;
-            this.UserName = login;
-            this.Password = password;
-        }
-        public bool checkPassword(string Password)
-        {
-            byte[] salat = Encoding.ASCII.GetBytes(Id + "LogicGames");
-            Rfc2898DeriveBytes pdkdf2 = new Rfc2898DeriveBytes(Password, salat);
-            Password = Encoding.ASCII.GetString(pdkdf2.GetBytes(20));
-            if (this.Password == Password) return true;
-            else return false;
+            string czyJestWBazie = "";
+            string connectionString = "server=logicgames.j.pl;uid=LogicGames;pwd=Log!cGame5;database=screpcik";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            MySqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(*) FROM ranking WHERE (Nick = '@param1' AND Gra = '@param2')";
+            cmd.Parameters.AddWithValue("@param1", nazwa);
+            cmd.Parameters.AddWithValue("@param2", gra);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            //int czyJestWBazie = int.Parse(dt.Rows[0].Field<string>(0));
+            // Console.WriteLine(czyJestWBazie);
+            while (dr.Read())
+            {
+                string chuj = dr[0].ToString();
+                Console.WriteLine(chuj);
+            }
+            if (czyJestWBazie == "-1") //Jeśli nie ma takiego usera.
+            {
+                MySqlCommand addUserAndPoints = new MySqlCommand("INSERT INTO ranking(Nick, Punkty, Gra) VALUES(@param1, @param2, @param3)", connection);
+                addUserAndPoints.Parameters.AddWithValue("@param1", nazwa);
+                addUserAndPoints.Parameters.AddWithValue("@param2", punkty);
+                addUserAndPoints.Parameters.AddWithValue("@param3", gra);
+                addUserAndPoints.ExecuteNonQuery();
+                connection.Close();
+            }
+            else                    // jesli jest
+            {
+                MySqlCommand updateUsersPoints = new MySqlCommand("");
+            }
         }
     }
 }
