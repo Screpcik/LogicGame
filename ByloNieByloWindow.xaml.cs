@@ -86,11 +86,7 @@ namespace LogicGame
             }
             else
             {
-                User user = new User();
-                SlowoLabel.Content = "przegrales " + pkt + " pkt.";
-                user.updateDateBase(nazwa, pkt, "Bylo Nie Bylo");
-                WylosowaneSlowa.Clear();
-                pkt = 0;
+                endgame();
             }
         }
 
@@ -104,11 +100,7 @@ namespace LogicGame
             }
             else
             {
-                User user = new User();
-                SlowoLabel.Content = "przegrales " + pkt + " pkt.";
-                user.updateDateBase(nazwa, pkt, "Bylo Nie Bylo");
-                WylosowaneSlowa.Clear();
-                pkt = 0;
+                endgame();
             }
             bylo = false;
         }
@@ -131,6 +123,18 @@ namespace LogicGame
             {
                 WylosowaneSlowa.Add(Slowa[x]);
             }
+        }
+        void endgame()
+        {
+            User user = new User();
+            SlowoLabel.Content = "przegrales " + pkt + " pkt.";
+            user.updateDateBase(nazwa, pkt, "Bylo Nie Bylo");
+            WylosowaneSlowa.Clear();
+            pkt = 0;
+            Task.Delay(2000);
+            MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
+            oknoPoZalogowaniu.Show();
+            this.Close();
         }
     }
  }

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
+        ResizeMode="CanMinimize"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="300">
     <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,-10,-5">
@@ -16,7 +17,7 @@
             </TransformGroup>
         </Grid.RenderTransform>
         <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="40,203,0,0" VerticalAlignment="Top" Width="179" Click="LoginButton_Click"/>
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" Margin="99,163,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" Margin="99,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="LoginLabel" Content="Nick" HorizontalAlignment="Left" Margin="40,159,0,0" VerticalAlignment="Top"/>
 
     </Grid>

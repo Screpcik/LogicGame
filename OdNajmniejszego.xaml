@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="OdNajmniejszego" Height="320.757" Width="683.681">
     <Grid>
         <Label x:Name="NumbersLabel" Content="" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="667" FontSize="18" Height="64"/>

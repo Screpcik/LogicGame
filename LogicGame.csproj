@@ -101,9 +101,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AlfabetWindow.xaml.cs">
-      <DependentUpon>AlfabetWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ByloNieByloWindow.xaml.cs">
       <DependentUpon>ByloNieByloWindow.xaml</DependentUpon>
     </Compile>
@@ -123,10 +120,6 @@
     <Compile Include="ZapamietajNumerWindow.xaml.cs">
       <DependentUpon>ZapamietajNumerWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AlfabetWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ByloNieByloWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

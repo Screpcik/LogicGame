@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Text.RegularExpressions;
 using System.Windows.Threading;
-
+using System.Threading.Tasks;
 namespace LogicGame
 {
     /// <summary>
@@ -76,6 +76,10 @@ namespace LogicGame
                     LiczbaLabel.Content = "Przegrałeś twój wynik to " + wynik;
                     User user = new User();
                     user.updateDateBase(nazwa, wynik, "Zapamiętaj Numer");
+                    Task.Delay(2000);
+                    MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
+                    oknoPoZalogowaniu.Show();
+                    this.Close();
                 }
             }
 

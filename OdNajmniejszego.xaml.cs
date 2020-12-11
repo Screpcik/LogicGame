@@ -88,6 +88,11 @@ namespace LogicGame
                     User user = new User();
                     user.updateDateBase(nazwa, timeelapsed, "Od Najmniejszego");
                     timer.Stop();
+                    Task.Delay(2000);
+                    MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
+                    oknoPoZalogowaniu.Show();
+                    this.Close();
+
                 }
                 return true;
             }

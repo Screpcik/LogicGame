@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        ResizeMode="CanMinimize"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
         Title="ByloNieByloWindow" Height="324.282" Width="398.172">

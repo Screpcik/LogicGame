@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
+        ResizeMode="CanMinimize"
         mc:Ignorable="d"
         Title="DzialaniaMatematyczneWindow" Height="306.658" Width="270.104">
     <Grid>

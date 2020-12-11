@@ -4,6 +4,7 @@ using System.Windows.Input;
 using System.Text.RegularExpressions;
 using System.Windows.Threading;
 using MySql.Data.MySqlClient;
+using System.Threading.Tasks;
 namespace LogicGame
 {
     /// <summary>
@@ -75,6 +76,10 @@ namespace LogicGame
                 TimeleftLabel.Content = "Koniec Gry. Uzyskałeś " + wynikPunktowy + " punktów.";
                 if(isPlaying) user.updateDateBase(nazwa, wynikPunktowy, "Dzialania Matematyczne");
                 isPlaying = false;
+                Task.Delay(2000);
+                MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
+                oknoPoZalogowaniu.Show();
+                this.Close();
             }
         }
         void randomize()

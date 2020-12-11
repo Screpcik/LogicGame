@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="MenuWindow" Height="335.156" Width="412.11">
     <Grid Margin="0,0,2,4" RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>

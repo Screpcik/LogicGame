@@ -46,6 +46,11 @@ namespace LogicGame
                     User user = new User();
                     user.updateDateBase(nazwa, wynik, "Czas Reakcji");
                     MessageBox.Show("Osiągnąłeś czasy: " + String.Join(", ", timesTested.ToArray()));
+                    Task.Delay(2000);
+                    MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
+                    oknoPoZalogowaniu.Show();
+                    this.Close();
+
                 }
             }
         }

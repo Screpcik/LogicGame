@@ -63,13 +63,8 @@ namespace LogicGame
                     odNajmniejszego.Show();
                     break;
 
-                case 7:
-                    AlfabetWindow alfabetWindow = new AlfabetWindow(nick); //database
-                    alfabetWindow.Show();
-                    break;
-
                 case 8:
-                    RankingWindow rankingWindow = new RankingWindow();
+                    RankingWindow rankingWindow = new RankingWindow(nick);
                     rankingWindow.Show();
                     break;
 

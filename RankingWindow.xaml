@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogicGame"
+        ResizeMode="CanMinimize"
         mc:Ignorable="d"
-        Title="RankingWindow" Height="450" Width="800">
+        Title="RankingWindow" Height="450" Width="248.955">
     <Grid>
-        
+        <DataGrid x:Name="BaseDataGrid" HorizontalAlignment="Left" DataContext="" Height="296" Margin="0,123,0,0" VerticalAlignment="Top" Width="240">
+
+        </DataGrid>
+
     </Grid>
 </Window>
