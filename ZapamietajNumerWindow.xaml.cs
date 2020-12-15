@@ -75,7 +75,14 @@ namespace LogicGame
                     wynik = liczba.Length;
                     LiczbaLabel.Content = "Przegrałeś twój wynik to " + wynik;
                     User user = new User();
-                    user.updateDateBase(nazwa, wynik, "Zapamiętaj Numer");
+                    try
+                    {
+                        user.updateDateBase(nazwa, wynik, "Zapamietaj Numer");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Prawdopodobny brak połączenia z internetem.");
+                    }
                     Task.Delay(2000);
                     MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
                     oknoPoZalogowaniu.Show();

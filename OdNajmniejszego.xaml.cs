@@ -39,7 +39,7 @@ namespace LogicGame
             {
                 liczba = rnd.Next(0, 100);
                 liczby.Add(liczba);
-                NumbersLabel.Content += liczba.ToString() + ", ";
+                NumbersLabel.Text += liczba.ToString() + ", ";
                 liczby.Sort();
             }
         }
@@ -77,16 +77,23 @@ namespace LogicGame
         {
             if (AnswerTextBox.Text == liczby[licznik].ToString())
             {
-                JustLabel.Content = "najs " + licznik;
+                JustLabel.Content = "Dobrych odpowiedzi " + (licznik + 1);
                 licznik++;
                 if(licznik == 15)
                 {
                     JustLabel.Content = "Brawo wygrałeś zajęło Ci to:";
-                    NumbersLabel.Content = timeelapsed.ToString() + ".0 sekundy.";
+                    NumbersLabel.Text = timeelapsed.ToString() + ".0 sekundy.";
                     liczby.Clear();
                     AnswerTextBox.IsEnabled = false;
                     User user = new User();
-                    user.updateDateBase(nazwa, timeelapsed, "Od Najmniejszego");
+                    try
+                    {
+                        user.updateDateBase(nazwa, timeelapsed, "Od Najmniejszego");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Prawdopodobny brak połączenia z internetem.");
+                    }
                     timer.Stop();
                     Task.Delay(2000);
                     MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);

@@ -128,7 +128,14 @@ namespace LogicGame
         {
             User user = new User();
             SlowoLabel.Content = "przegrales " + pkt + " pkt.";
-            user.updateDateBase(nazwa, pkt, "Bylo Nie Bylo");
+            try
+            {
+                user.updateDateBase(nazwa, pkt, "Bylo Nie Bylo");
+            }
+            catch
+            {
+                MessageBox.Show("Prawdopodobny brak połączenia z internetem.");
+            }
             WylosowaneSlowa.Clear();
             pkt = 0;
             Task.Delay(2000);

@@ -31,7 +31,7 @@ namespace LogicGame
         {
             nick = login;
             InitializeComponent();
-            LoggedAsLabel.Content = "Zalogowano jako " + login;
+            LoggedAsLabel.Content = "Witaj, " + login;
         }
         void ChooseGame(int button)
         {

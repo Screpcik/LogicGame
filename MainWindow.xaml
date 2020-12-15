@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LogicGame"
         ResizeMode="CanMinimize"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="300">
+        Title="MainWindow" Height="1024px" Width="768px">
     <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,-10,-5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -16,9 +16,25 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="40,203,0,0" VerticalAlignment="Top" Width="179" Click="LoginButton_Click"/>
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="23" Margin="99,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="LoginLabel" Content="Nick" HorizontalAlignment="Left" Margin="40,159,0,0" VerticalAlignment="Top"/>
+        <Image Width="255" Margin="258,129,259,612">
+            <Image.Source>
+                <BitmapImage UriSource="/images/puzzle@2x.png"></BitmapImage>
+            </Image.Source>
+        </Image>
+        <Image Width="43.5" Margin="165,549,553,398" RenderTransformOrigin="-0.01,0.492">
+            <Image.Source>
+                <BitmapImage UriSource="/images/user-2@2x.png"></BitmapImage>
+            </Image.Source>
+        </Image>
+        <Button x:Name="LoginButton" Content="ZALOGUJ" HorizontalAlignment="Left" Margin="258,796,0,0" VerticalAlignment="Top" Width="255" Height="59" Click="LoginButton_Click" FontSize="18" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.4,0">
+                    <GradientStop Color="#FFAE2CF1" Offset="0.087"/>
+                    <GradientStop Color="#FF7776FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="53" Margin="224,549,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="311" BorderThickness="0,0,0,4" BorderBrush="MediumPurple" Opacity="0.5" FontSize="32" GotFocus="LoginTextBox_GotFocus"/>
 
     </Grid>
 </Window>

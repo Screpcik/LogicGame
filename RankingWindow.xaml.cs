@@ -28,9 +28,23 @@ namespace LogicGame
             string connectionString = "server=logicgames.j.pl;uid=LogicGames;pwd=Log!cGame5;database=screpcik";
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM ranking", connectionString);
             DataSet ds = new DataSet();
-            da.Fill(ds, "ranking");
             InitializeComponent();
-            BaseDataGrid.ItemsSource= ds.Tables["ranking"].DefaultView;
+            try
+            {
+                da.Fill(ds, "ranking");                
+                BaseDataGrid.ItemsSource = ds.Tables["ranking"].DefaultView;
+            }
+            catch
+            {
+                MessageBox.Show("Prawdopodobnie brak połączenia z internetem.");
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
+            oknoPoZalogowaniu.Show();
+            this.Close();
         }
     }
 }

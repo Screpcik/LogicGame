@@ -11,6 +11,14 @@
         <DataGrid x:Name="BaseDataGrid" HorizontalAlignment="Left" DataContext="" Height="296" Margin="0,123,0,0" VerticalAlignment="Top" Width="240">
 
         </DataGrid>
+        <Button Content="Cofnij do wyboru gier" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="214" Height="33" FontSize="18" Foreground="White" Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAE2CF1" Offset="0.087"/>
+                    <GradientStop Color="#FF7776FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

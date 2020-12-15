@@ -6,11 +6,20 @@
         xmlns:local="clr-namespace:LogicGame"
         ResizeMode="CanMinimize"
         mc:Ignorable="d"
-        Title="ZapamietajNumerWindow" Height="327.807" Width="402.872">
+        Title="ZapamietajNumerWindow" Height="1024" Width="768">
     <Grid>
-        <Label x:Name="LiczbaLabel" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="374" FontSize="24"/>
-        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="50" Margin="10,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown" FontSize="22"/>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="374" Click="StartButton_Click" Height="49"/>
+        <Label x:Name="LiczbaLabel" Content="" HorizontalAlignment="Left" Margin="25,505,0,0" VerticalAlignment="Top" Width="727" FontSize="28" />
+        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="50" Margin="61,689,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="644" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown" FontSize="26" BorderThickness="0,0,0,1" Text=""/>
+        <Button x:Name="StartButton" Content="START" Foreground="White" FontSize="24" HorizontalAlignment="Left" Margin="25,879,0,0" VerticalAlignment="Top" Width="727" Click="StartButton_Click" Height="73">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.4,0">
+                    <GradientStop Color="#FFAE2CF1" Offset="0.087"/>
+                    <GradientStop Color="#FF7776FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Zapamiętaj Numer" FontSize="36" HorizontalAlignment="Left" Margin="35,35,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,161,0,0" TextWrapping="Wrap" Text="Zapamiętuj kolejne cyfry wyświetlane przez 3 sekundy i uzyskaj jak najdłuższą liczbę! Po wpisaniu liczby naciśnij enter. Okno do wpisywania liczb jest nieaktywne podczas wyświetlania liczby) Wciśnij start by rozpocząć. Po zakończeniu gry zostaniesz przeniesiony do menu wyboru gier." VerticalAlignment="Top" Height="237" Width="707" FontSize="24"/>
 
     </Grid>
 </Window>

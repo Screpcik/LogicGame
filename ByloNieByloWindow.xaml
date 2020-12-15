@@ -6,21 +6,24 @@
         ResizeMode="CanMinimize"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="ByloNieByloWindow" Height="324.282" Width="398.172">
+        Title="ByloNieByloWindow" Height="1024" Width="768">
     <Grid>
-        <Label x:Name="SlowoLabel" Content="Label" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" Height="69" Width="294" FontSize="36" >
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-1800.667"/>
-                    <TranslateTransform X="-0.348" Y="0.642"/>
-                </TransformGroup>
-            </Label.RenderTransform>
+        <Label x:Name="SlowoLabel" Content="słowo" HorizontalAlignment="Left" Margin="269,535,0,0" VerticalAlignment="Top" Height="69" Width="294" FontWeight="Bold" FontSize="36" >
+
         </Label>
-        <Button x:Name="ByloButton" Content="Bylo" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="150" Click="ByloButton_Click" Height="75"/>
-        <Button x:Name="NieByloButton" Content="Nie bylo" HorizontalAlignment="Left" Margin="233,134,0,0" VerticalAlignment="Top" Width="150" Click="NieByloButton_Click" Height="75"/>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="373" Click="StartButton_Click" Height="69"/>
+        <Button x:Name="ByloButton" Content="Bylo"  FontSize="24" Foreground="White" Background="#FFAE2CF1" HorizontalAlignment="Left" Margin="30,786,0,0" VerticalAlignment="Top" Width="326" Click="ByloButton_Click" Height="75"/>
+        <Button x:Name="NieByloButton" Content="Nie bylo" FontSize="24" Foreground="White" Background="#FF7776FF" HorizontalAlignment="Left" Margin="413,786,0,0" VerticalAlignment="Top" Width="322" Click="NieByloButton_Click" Height="75"/>
+        <Button x:Name="StartButton" Content="START" FontSize="24" HorizontalAlignment="Left" Margin="30,884,0,0" VerticalAlignment="Top" Width="705" Click="StartButton_Click" Height="69" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.4,0">
+                    <GradientStop Color="#FFAE2CF1" Offset="0.087"/>
+                    <GradientStop Color="#FF7776FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Czy dane słowo pojawiło się wcześniej?" HorizontalAlignment="Left" Margin="30,372,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Bylo Nie Bylo" HorizontalAlignment="Left" Margin="30,32,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,124,0,0" TextWrapping="Wrap" Text="Zapamiętaj czy podane słowo już wystąpiło czy jeszcze nie i uzyskaj jak najwyższy wynik! Wciśnij start by rozpocząć. Do menu wyboru gier zostaniesz przeniesiony/a po zakończeniu gry." VerticalAlignment="Top" Height="243" Width="705" FontSize="24"/>
 
     </Grid>
 </Window>

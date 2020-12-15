@@ -39,5 +39,11 @@ namespace LogicGame
             MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
             oknoPoZalogowaniu.Show();        
         }
+
+        private void LoginTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            LoginTextBox.Opacity = 100;
+            LoginTextBox.Text = "";
+        }
     }
 }

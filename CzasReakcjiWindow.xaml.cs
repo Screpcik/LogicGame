@@ -37,20 +37,26 @@ namespace LogicGame
                 stopwatch.Stop();
                 timesTested.Add(stopwatch.ElapsedMilliseconds);
                 ReactionButton.Background = Brushes.Red;
-                ReactionButton.Content = string.Format("Twój czas to {0} millisekund",
-                                                       timesTested[timesTested.Count - 1]);
+                ReactionButton.Content = "próba " + timesTested.Count.ToString()+" z 3.";
+                TimeLabel.Content = string.Format("{0} ms.", timesTested[timesTested.Count - 1]);
                 if (timesTested.Count == 3)
                 {
                     int suma = Convert.ToInt32(timesTested[0]) + Convert.ToInt32(timesTested[1]) + Convert.ToInt32(timesTested[2]);
                     int wynik = suma / 3;
                     User user = new User();
-                    user.updateDateBase(nazwa, wynik, "Czas Reakcji");
-                    MessageBox.Show("Osiągnąłeś czasy: " + String.Join(", ", timesTested.ToArray()));
+                    try
+                    {
+                        user.updateDateBase(nazwa, wynik, "Czas Reakcji");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Prawdopodobny brak połączenia z internetem.");
+                    }
+                    TimeLabel.Content = "Osiągnąłeś czasy: " + String.Join(", ", timesTested.ToArray());
                     Task.Delay(2000);
                     MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
                     oknoPoZalogowaniu.Show();
                     this.Close();
-
                 }
             }
         }
@@ -67,7 +73,7 @@ namespace LogicGame
             ReactionButton.Content = "Wcisnij jak najszybciej gdy zrobi sie zielony";
             Task.Delay(random.Next(3000, 5000)).Wait();
             stopwatch.Start();
-            ReactionButton.Background = Brushes.Green;
+            ReactionButton.Background = Brushes.DodgerBlue;
             ReactionButton.Content = "WCISNIJ TERAZ";
         }
     }

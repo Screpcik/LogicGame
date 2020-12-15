@@ -6,10 +6,18 @@
         ResizeMode="CanMinimize"
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
-        Title="CzasReakcjiWindow" Height="311.358" Width="332.376">
+        Title="CzasReakcjiWindow" Height="1024" Width="768">
     <Grid>
-        <Button x:Name="ReactionButton" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Click="ReactionButton_Click" IsEnabled="False" Height="150"/>
-        <Button x:Name="StartButton" Content="Pierw ten button potem ten u góry" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="300" Click="StartButton_Click" Height="100"/>
+        <Button x:Name="ReactionButton" Content="" HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top" Width="742" Click="ReactionButton_Click" IsEnabled="False" Height="143"/>
+        <Button x:Name="StartButton" Content="Ten button jako pierwszy potem poczekaj i ten na górze" HorizontalAlignment="Left" Margin="10,414,0,0" Foreground="White" VerticalAlignment="Top" Width="742" Click="StartButton_Click" Height="143" FontSize="30" Background="#FFAE2CF1"/>
+        <Label Content="Czas reakcji to:" HorizontalAlignment="Left" Height="44" Margin="176,802,0,0" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.523,1.517" FontSize ="24"/>
+        <Label x:Name="TimeLabel" Content="" HorizontalAlignment="Left" Margin="349,802,0,0" VerticalAlignment="Top" Foreground="#FFAE2CF1" FontWeight="Bold" FontSize="24" RenderTransformOrigin="12,2.452"/>
+        <Label Content="Czas Reakcji:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="24">
+            Wciśnij przycisk na dole poczekaj od 3 do 5 sekund i po zaświeceniu się górnego przycisku na zielono naciśnij go najszybciej jak potrafisz
+            i uzyskaj jak najniższy średni czas reakcji z 3 prób. Wciśnij dolny przycisk by rozpocząć. Do menu wyboru gier zostaniesz przeniesiony/a po zakończeniu gry.
+        </TextBlock>
+
 
     </Grid>
 </Window>

@@ -6,12 +6,28 @@
         xmlns:local="clr-namespace:LogicGame"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
-        Title="OdNajmniejszego" Height="320.757" Width="683.681">
+        Title="OdNajmniejszego" Height="1024" Width="768">
     <Grid>
-        <Label x:Name="NumbersLabel" Content="" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="667" FontSize="18" Height="64"/>
-        <Label x:Name="JustLabel" Content="Wpisz podane niżej liczby w kolejności od najmiejszej po kazdej naciśnij enter." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="556" FontSize="16"/>
-        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="62" Margin="245,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" IsEnabled="False" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown" FontSize="24"/>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="245,224,0,0" VerticalAlignment="Top" Width="167" Click="StartButton_Click" Height="56"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="222*"/>
+            <RowDefinition Height="773*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="NumbersLabel" FontSize="36" FontWeight="Bold" Text="" Margin="10,19,10,577" Grid.Row="1" TextWrapping="Wrap" ></TextBlock>
+        <Label x:Name="JustLabel" Content="Od Najmniejszego" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="556" FontSize="36"/>
+        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Height="62" Margin="283,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" IsEnabled="False" PreviewTextInput="NumberValidationTextBox" KeyDown="AnswerTextBox_KeyDown" FontSize="24" BorderThickness="0,0,0,1" Grid.Row="1"/>
+        <Button x:Name="StartButton" Content="START" HorizontalAlignment="Left" Margin="68,665,0,0" VerticalAlignment="Top" Width="634" Click="StartButton_Click" Height="56" FontSize="24" Grid.Row="1" Foreground="WHITE">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAE2CF1" Offset="0.087"/>
+                    <GradientStop Color="#FF7776FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="25,73,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalAlignment="Top" Width="697" Height="134">
+            Ułóż liczby w kolejności od najmniejszej do największej w jak najkrótszym czasie! Po wpisaniu liczby naciśnij enter.
+            Wciśnij start by rozpocząć.
+        </TextBlock>
+
 
     </Grid>
 </Window>

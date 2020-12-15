@@ -50,20 +50,20 @@ namespace LogicGame
         }
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            Timeleft = 3;
+            Timeleft = 30;
             isPlaying = true;
             randomize();
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timer_Tick;
             timer.Start();
-            TimeleftLabel.Content = "Pozostało "+ Timeleft +"s.";
+            TimeleftLabel.Content =Timeleft +"s.";
         }
         void timer_Tick(object sender, EventArgs e)
         {
             if (Timeleft > 0)
             {
-                TimeleftLabel.Content = "Pozostało " + Timeleft + "s.";
+                TimeleftLabel.Content =Timeleft + "s.";
                 Timeleft--;
             }
             else
@@ -74,7 +74,17 @@ namespace LogicGame
                 SecondNumber = -122;
                 ResultTextBox.Text = "";
                 TimeleftLabel.Content = "Koniec Gry. Uzyskałeś " + wynikPunktowy + " punktów.";
-                if(isPlaying) user.updateDateBase(nazwa, wynikPunktowy, "Dzialania Matematyczne");
+                if (isPlaying)
+                {
+                    try
+                    {
+                        user.updateDateBase(nazwa, wynikPunktowy, "Dzialania Matematyczne");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Prawdopodobny brak połączenia z internetem.");
+                    }
+                }
                 isPlaying = false;
                 Task.Delay(2000);
                 MenuWindow oknoPoZalogowaniu = new MenuWindow(nazwa);
